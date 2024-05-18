@@ -1,0 +1,87 @@
+# Computer System
+Un sistema di computer è un sistema completo che include il sistema operativo (il software principale) e l’attrezzatura che lo fa funzionare. 
+In altre parole, un computer è una macchina programmabile che memorizza, elabora le informazioni ed è in grado di eseguire dei programmi.
+
+# Operating System (Sistema Operativo)
+Un sistema operativo (SO o OS) è un software di base che gestisce le risorse hardware e software di un computer. 
+Il suo compito principale è coordinare le risorse necessarie, controllando e gestendo sia l’hardware che il software, permettendo così a chi usa il computer di ottenere ciò di cui ha bisogno.
+
+# File System
+Un file system è un sistema di archiviazione su un supporto di memoria che struttura e organizza in modo specifico scrittura, ricerca, lettura, memorizzazione, modifica ed eliminazione dei file. 
+Organizza file ed directory per garantire un’adeguata allocazione dello spazio sul dispositivo.
+
+# Hardware
+L’hardware, che deriva dall’unione dei due termini inglesi hard (duro o pesante) e ware (componente o oggetto), si intende la parte fisica del computer, ovvero tutte quelle componenti del PC che è letteralmente possibile toccare con le proprie mani. 
+Queste componenti possono trovarsi sia all’interno del computer, sotto forma di schede elettroniche, sia all’esterno del computer, sotto forma di particolari componenti come, ad esempio, i monitor, le tastiere e i mouse.
+
+
+# POST (Power-On Self-Test)
+La POST è una fase cruciale durante l’avvio di un computer. Questa fase è responsabile per effettuare dei test sull’hardware che consentiranno poi di poter effettuare il boot del sistema operativo. Ecco le fasi salienti che le istruzioni contenute nel programma compiono:
+
+## Verifica della CPU
+Il BIOS verifica il corretto funzionamento della CPU inserendo dei numeri in tutti i registri. Se il valore trovato è diverso da quello inserito, il BIOS fa emettere 5 bit continui alla macchina.
+
+## Verifica del ROM BIOS
+Questo test serve per assicurarsi della consistenza del contenuto del BIOS. Se il test fallisce, abbiamo 9 bip continui.
+
+## Verifica del controller della tastiera
+Il BIOS spedisce al controller della tastiera il comando esadecimale AA e di risposta è atteso il valore esadecimale 55. Se qualcosa fallisce, il BIOS emette 6 bip consecutivi.
+
+## CMOS
+La verifica del CMOS viene messa in una parte della memoria e se questo test ha avuto esito negativo il sistema operativo mostrerà un messaggio visivo all’utente.
+
+## Channel 2,1,0 timer
+Se questo test ha esito negativo il BIOS emette dei bit sonori, altrimenti se c’è qualche problema minore il risultato viene messo in una parte della memoria in modo che il sistema operativo lo mostri all’utente solo dopo aver verificato la scheda video.
+
+## Memory Refresh
+Viene verificato il tempo necessario ad eseguire un’operazione di refresh.
+
+Se ci fosse qualcosa che non funziona, il BIOS avvertirà l’utente con una serie di bip sonori.
+
+# Avvio del Computer
+Quando si accende un computer, la CPU (Central Processing Unit) inizia il processo di avvio accedendo alla ROM (Read-Only Memory) e al BIOS (Basic Input-Output System).
+
+## BIOS
+Il BIOS è un insieme di istruzioni software memorizzate su una memoria non volatile (ROM) all’interno del computer. Queste istruzioni forniscono tutte le informazioni di base necessarie per far interagire correttamente l’hardware e il software e avviare il sistema operativo.
+
+## Processo di Avvio
+Quando la CPU accede alla ROM, legge il BIOS che si trova nei primi indirizzi di memoria. Il BIOS si attiva automaticamente e avvia il Power-on self-test (POST), una sequenza di pre-avvio in cui vengono riconosciute le periferiche hardware del computer. Successivamente, il BIOS carica il bootloader, che si occupa di cercare e avviare il sistema operativo.
+
+## Conclusione
+In sintesi, l’accesso della CPU alla ROM e al BIOS è un passaggio fondamentale nel processo di avvio di un computer, poiché consente al sistema di prepararsi per l’avvio del sistema operativo.
+
+# BIOS vs UEFI
+Il BIOS (Basic Input-Output System) e l’UEFI (Unified Extensible Firmware Interface) sono entrambi dei firmware che forniscono l’interfaccia tra il sistema operativo e l’hardware del computer. Tuttavia, ci sono alcune differenze chiave tra i due:
+
+## Età e Obsolescenza
+Il BIOS è un sistema più vecchio e obsoleto, introdotto negli anni '80. Al contrario, l’UEFI è un sistema più moderno e avanzato, sviluppato per superare i limiti del BIOS.
+
+## Interfaccia e Funzionalità
+L’UEFI offre un’interfaccia grafica e scorrevole, supporta l’avvio sicuro e le funzionalità di rete. Inoltre, l’UEFI può essere eseguito sia in modalità a 32 bit che a 64 bit.
+
+## Supporto per Dischi Rigidi
+L’UEFI supporta dischi rigidi o SSD con una capacità superiore a 2.2 TB, mentre il BIOS può supportare dischi rigidi o SSD con una capacità massima fino a 2 TB.
+
+## Velocità di Avvio
+L’UEFI garantisce un avvio più veloce rispetto al BIOS, poiché utilizza il linguaggio di programmazione C.
+
+## Conclusione
+In sintesi, l’UEFI è considerato un miglioramento rispetto al BIOS tradizionale, offrendo più funzionalità, maggiore sicurezza e supporto per dischi rigidi di dimensioni maggiori.
+ 
+ # MBR vs GPT
+MBR (Master Boot Record) e GPT (GUID Partition Table) sono due diversi standard utilizzati per la struttura delle partizioni sui dischi. Ecco alcune differenze chiave tra i due:
+
+## Età e Compatibilità
+MBR è un sistema più vecchio, introdotto negli anni '80. Al contrario, GPT è un sistema più recente, in circolazione dal 2006. MBR non è compatibile con l’installazione di Windows 11.
+
+## Capacità Massima del Disco
+MBR supporta solo dischi fino a 2TB, mentre GPT supporta dischi di dimensioni superiori a 2TB.
+
+## Numero Massimo di Partizioni
+MBR supporta solo 4 partizioni primarie, o 3 partizioni primarie e una partizione estesa con molte partizioni logiche all’interno. GPT, invece, non ha questo limite.
+
+## Robustezza
+GPT è più robusto e consente unità più grandi.
+
+## Conclusione
+In sintesi, GPT è generalmente considerato un miglioramento rispetto a MBR, offrendo più funzionalità, maggiore sicurezza e supporto per dischi rigidi di dimensioni maggiori.
